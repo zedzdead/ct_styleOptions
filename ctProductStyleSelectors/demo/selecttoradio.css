@@ -1,0 +1,48 @@
+.ct_pd_options_style {padding: 10px; border: solid 1px #ccc; margin:10px 0;}
+.ct_pd_options_style div label, .ct_pd_options_style option {color: #ccc;} /*Default for items that don't exist*/
+.ct_pd_options_style .oos, .ct_pd_options_style .oos label {color: red;} /* Out of Stock */
+.ct_pd_options_style .is,  .ct_pd_options_style .is label {color: lime;} /* In Stock */
+.ct_pd_options_style > label {display: block; font-weight: 700;}
+.ct_pd_options_style > label span {}
+.ct_pd_options_style > label span:before {content: ':';}
+.ct_pd_options_style div {display: inline-block; height: 30px; margin: 10px; position: relative;}
+
+.ct_pd_options_style div label:hover {cursor: pointer;}
+.ct_pd_options_style div label span {
+  border: 3px solid #ccc;
+  display: inline-block;
+  height: 20px;
+  padding: 5px;
+  vertical-align: top;
+  width: 20px;
+  vertical-align: middle;
+}
+.ct_pd_options_style div input:checked + label {border-bottom: 3px solid green;}
+.ct_pd_options_style div input:checked + label span {border: 3px ridge #666;}
+.ct_pd_options_style div.hidden input {display: none;} /* Hide imput and use labels for click events */
+
+/* Style Type Specific rules */
+/* For a colour swatch style, label text may not be required */
+
+.ct_pd_options_style_colour div label {font-size: 0;}
+.ct_pd_options_style_colour div.oos span {opacity: 0.05;}
+.ct_pd_options_style_colour div.is span {opacity: 1;}
+.ct_pd_options_style_colour div input:checked + label {
+  display: inline-block;
+  padding-bottom: 5px;
+  width: 100%;
+}
+.ct_pd_options_style_colour input[type="radio"] + label::before {
+  background: transparent url("/swatches/out-of-stock-style.png") no-repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 50px;
+  left: -7px;
+  position: absolute;
+  top: -6px;
+  width: 50px;
+}
+
+.ct_pd_options_style_colour div.oos input[type="radio"] + label::before,
+.ct_pd_options_style_colour div.is input[type="radio"] + label::before {background: none;}
+

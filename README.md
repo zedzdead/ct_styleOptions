@@ -46,6 +46,12 @@ var prodStyles = {
   }
 };
 ```
+Now this instantiation will convert the Shirt Colour dropdowns into radio buttons, whose labels are clickable. The style sheet hides the radio buttons, sizes the labels removes the text and applies the colour background from the hex values in the above styles definition:
 
+```
+	$( "#product_style_colour" ).productStyle( {
+		productStyle: "Shirt_Colour" //Case Sensetive - use underscores unless spaceAlt is declared
+	});
+```
 
 

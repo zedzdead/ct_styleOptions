@@ -19,7 +19,7 @@ This converts this drop-down into radio buttons.  It also identifies in-stock ou
 ## Adding Colour Styles
 
 The prodStyles.js file holds all the styles which require a draphical selector, either colour or swatch/thumbnail.
-...
+```
 var prodStyles = { 
   Colour: {
     "White":         "white",
@@ -45,7 +45,7 @@ var prodStyles = {
     "Black":         "#000"  
   }
 };
-...
+```
 
 
 
